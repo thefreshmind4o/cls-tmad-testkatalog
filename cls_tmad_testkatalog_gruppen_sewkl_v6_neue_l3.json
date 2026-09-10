@@ -1,0 +1,79 @@
+{
+  "neue_l3_testfaelle": [
+    {
+      "id": "tmad_positiv_53_l3_institution_zugang_beschwerdeweg",
+      "falltyp": "positiv",
+      "beschreibung": "L3-Bilanz: Verteilung von Zugang, Gehoer, Beschwerdeweg, Information in Institution, Runde 2-3.",
+      "erwartetes_verhalten": "L3 mit System-Bezug, VTL-Feldern, Bilanztyp, Schutzgrenze.",
+      "beispieldaten": {
+        "l3_bilanz": {
+          "id": "l3_institution_zugang_001",
+          "system_ref": "institution_schule_X",
+          "system_typ": "institution",
+          "teilnehmer_refs": [{"id": "schueler_A", "typ": "person"}, {"id": "schueler_B", "typ": "person"}, {"id": "lehrkraft_C", "typ": "person"}],
+          "betroffenen_refs": [{"id": "eltern_D", "typ": "person"}],
+          "nicht_vertretene_perspektiven": ["Schueler ohne Beschwerdevertretung"],
+          "berechtigte_l1_refs": [{"id": "l1_pubertaet_institution_koennen_001", "typ": "l1_position"}],
+          "berechtigte_l2_refs": [{"id": "l2_institution_koennen_koennen_001", "typ": "l2_relation"}, {"id": "l2_institution_sollen_sollen_001", "typ": "l2_relation"}],
+          "bilanzfrage": "Wie verteilen sich Zugang, Gehoer, Beschwerdeweg, Information und Schutz?",
+          "wir_feld_ref": "wir_feld_institution_schule_X",
+          "wir_feld_typ": "institution",
+          "sewkl_runde": "pubertaet",
+          "zeitfenster": {"von": "2026-09-01T00:00:00Z", "bis": null},
+          "perspektivlage": "Bilanz erstellt durch externe Beratungsstelle auf Basis von Interviews mit Schuelern und Lehrkraeften.",
+          "vtl_felder": [
+            {"feld": "Erlaubnisverteilung", "pruefstatus": "asymmetrie", "beschreibung": "Lehrkraefte haben mehr Entscheidungsmacht als Schueler."},
+            {"feld": "Faehigkeitszugang", "pruefstatus": "ungedeckt", "beschreibung": "Nicht alle Schueler haben Zugang zu Foerderangeboten."},
+            {"feld": "Revisionsmacht", "pruefstatus": "offen", "beschreibung": "Beschwerdeweg existiert, wird aber wenig genutzt."}
+          ],
+          "bilanztyp": ["asymmetrische_ungedecktheit"],
+          "geltungs_und_unsicherheitsgrenzen": ["Basierend auf Selbstauskunft; keine vollstaendige Erfassung aller Schueler."],
+          "zweck_zugriff_weitergabe": {
+            "zweck": "Beratungsgespraech zur Verbesserung der Partizipation.",
+            "zugriff": ["institution_schule_X", "beratungsstelle"],
+            "weitergabe": ["nur_mit_zustimmung"]
+          },
+          "schutzgrenze": "Keine formale Systembilanz als Ersatz fuer legitime Verfahren, Beschwerdeweg oder Informationszugang."
+        }
+      }
+    },
+    {
+      "id": "tmad_positiv_54_l3_peers_zugehoerigkeit_status",
+      "falltyp": "positiv",
+      "beschreibung": "L3-Bilanz: Verteilung von Zugehoerigkeit, Sichtbarkeit, Status, Ausschlussrisiko in Peers, Runde 2.",
+      "erwartetes_verhalten": "L3 mit System-Bezug, VTL-Feldern, Bilanztyp, Schutzgrenze.",
+      "beispieldaten": {
+        "l3_bilanz": {
+          "id": "l3_peers_zugehoerigkeit_001",
+          "system_ref": "peers_clique_Y",
+          "system_typ": "gruppe",
+          "teilnehmer_refs": [{"id": "jugendliche_A", "typ": "person"}, {"id": "jugendliche_B", "typ": "person"}, {"id": "jugendliche_C", "typ": "person"}],
+          "betroffenen_refs": [{"id": "jugendliche_D", "typ": "person"}],
+          "nicht_vertretene_perspektiven": ["Ausgeschlossene Jugendliche"],
+          "berechtigte_l1_refs": [{"id": "l1_pubertaet_peers_muessen_001", "typ": "l1_position"}],
+          "berechtigte_l2_refs": [{"id": "l2_peers_wollen_sollen_001", "typ": "l2_relation"}, {"id": "l2_peers_wollen_wollen_001", "typ": "l2_relation"}],
+          "bilanzfrage": "Wie verteilen sich Zugehoerigkeit, Sichtbarkeit, Status, Ausschlussrisiko?",
+          "wir_feld_ref": "wir_feld_peers_clique_Y",
+          "wir_feld_typ": "freundschaft_peers",
+          "sewkl_runde": "pubertaet",
+          "zeitfenster": {"von": "2026-09-01T00:00:00Z", "bis": null},
+          "perspektivlage": "Bilanz erstellt durch Schulsozialarbeit auf Basis von Beobachtungen und Gespraechen.",
+          "vtl_felder": [
+            {"feld": "Positives", "pruefstatus": "gedeckt", "beschreibung": "Kerngruppe fuehlt sich zugehoerig."},
+            {"feld": "Negatives", "pruefstatus": "asymmetrie", "beschreibung": "Randmitglieder tragen mehr Ausschlussrisiko."},
+            {"feld": "Willensgeltung", "pruefstatus": "asymmetrie", "beschreibung": "Anfuehrer entscheiden ueber Gruppenaktivitaeten."},
+            {"feld": "Definitionsmacht", "pruefstatus": "asymmetrie", "beschreibung": "Normen werden von Kerngruppe gesetzt."}
+          ],
+          "bilanztyp": ["asymmetrische_ungedecktheit"],
+          "geltungs_und_unsicherheitsgrenzen": ["Basierend auf Beobachtung; keine vollstaendige Erfassung aller Peers."],
+          "zweck_zugriff_weitergabe": {
+            "zweck": "Interventionsplanung zur Reduktion von Ausschlussrisiko.",
+            "zugriff": ["schulsozialarbeit", "peers_clique_Y"],
+            "weitergabe": ["nur_mit_zustimmung_beteiligten"]
+          },
+          "schutzgrenze": "Keine automatische Fairnessbewertung; keine Intervention ohne Entscheidung und Duerfen-Pruefung."
+        }
+      }
+    }
+  ]
+}
